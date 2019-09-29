@@ -19,14 +19,14 @@ export class ApicallService {
     private httpClient: HttpClient
   ) { }
   GetCurrentProductSetting() {
-    return this.httpClient.get(environment.productsetting_url);
+    return this.httpClient.get(environment.apiurl + 'productsetting');
   }
   getCurrentWeather() {
-    return this.httpClient.get<IProductSetting>('http://localhost:3000/productsetting');
+    return this.httpClient.get<IProductSetting>(environment.apiurl + 'productsetting');
   }
 
   calculateFindingCost(FindingName, FindingAmountOfMeasure, FindingQuantity) {
-    return this.httpClient.post<IFindingCost>('http://localhost:3000/calculator/finding', {
+    return this.httpClient.post<IFindingCost>(environment.apiurl + 'calculator/finding', {
       'finding_name': FindingName,
       'finding_amount_of_unit_of_measure': FindingAmountOfMeasure,
       'finding_quantity': FindingQuantity
@@ -34,7 +34,7 @@ export class ApicallService {
   }
 
   calculateStoneCost(StoneName, StoneSettingType, StoneAmountOfMeasure, StoneQuantity, Material) {
-    return this.httpClient.post<IStoneCost>('http://localhost:3000/calculator/stone', {
+    return this.httpClient.post<IStoneCost>(environment.apiurl + 'calculator/stone', {
       'stone_name': StoneName,
       'stone_amount_of_unit_of_measure': StoneAmountOfMeasure,
       'stone_quantity': StoneQuantity,
@@ -44,7 +44,7 @@ export class ApicallService {
   }
 
   calculateMetalCost(AlloyName, AlloyAmountOfMeasureUnit, AlloyQuantity, ProductType, DifficultyType, FinishColor) {
-    return this.httpClient.post<IMetalCost>('http://localhost:3000/calculator/metal', {
+    return this.httpClient.post<IMetalCost>(environment.apiurl + 'calculator/metal', {
       'alloy_name': AlloyName,
       'alloy_amount_of_unit_of_measure': AlloyAmountOfMeasureUnit,
       'alloy_quantity': AlloyQuantity,
@@ -55,20 +55,20 @@ export class ApicallService {
   }
 
   calculateCncLaborCost(CncSize, CncType) {
-    return this.httpClient.post<ICncCost>('http://localhost:3000/calculator/cnc', {
+    return this.httpClient.post<ICncCost>(environment.apiurl + 'calculator/cnc', {
       'cnc_size': CncSize,
       'cnc_type': CncType
     });
   }
 
   calculateLaqueringLaborCost(LacqueringType) {
-    return this.httpClient.post<ILacqueringCost>('http://localhost:3000/calculator/lacquering', {
+    return this.httpClient.post<ILacqueringCost>(environment.apiurl + 'calculator/lacquering', {
       'lacquering_type': LacqueringType
     });
   }
 
   calculatePlatingLaborCost(PlatingType, ProductType, DifficultyType) {
-    return this.httpClient.post<IPlatingCost>('http://localhost:3000/calculator/plating', {
+    return this.httpClient.post<IPlatingCost>(environment.apiurl + 'calculator/plating', {
       'plating_type': PlatingType,
       'product_type': ProductType,
       'difficulty_type': DifficultyType
