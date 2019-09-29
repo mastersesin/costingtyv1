@@ -1,0 +1,202 @@
+<form #productsetting = "ngForm" (ngSubmit) = "onClickSubmit(productsetting.value)">
+
+  <!-- ALLOY INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Alloy name</mat-label>
+    <mat-select name='alloy_name_string' ngModel>
+      <mat-option *ngFor="let text of AlloyName" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input name='alloy_amount_of_unit_of_measure' matInput placeholder="Amount of measure unnit" ngModel>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input name='alloy_quantity' matInput placeholder="Quantity" ngModel>
+  </mat-form-field>
+
+  <!-- PRODUCT TYPE INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Product Type</mat-label>
+    <mat-select name='product_type_string' ngModel>
+      <mat-option *ngFor="let text of ProductType" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- DIFFICULTY TYPE INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Difficulty Type</mat-label>
+    <mat-select name='difficulty_type_string' ngModel>
+      <mat-option *ngFor="let text of DifficultyType" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- CNC SIZE INPUT FIELD -->
+  <!-- <mat-form-field>
+    <mat-label>CNC Size</mat-label>
+    <mat-select name='cnc_size_string' ngModel>
+      <mat-option *ngFor="let text of CncSize" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field> -->
+
+  <!-- CNC TYPE INPUT FIELD -->
+  <!-- <mat-form-field>
+    <mat-label>CNC Type</mat-label>
+    <mat-select name='cnc_type_string' ngModel>
+      <mat-option *ngFor="let text of CncType" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field> -->
+
+  <!-- DESIGN TYPE INPUT FIELD -->
+  <!-- <mat-form-field>
+    <mat-label>Design Type</mat-label>
+    <mat-select name='design_type_string' ngModel>
+      <mat-option *ngFor="let text of DesignType" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field> -->
+
+  <!-- FINISH COLOR INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Finish Color</mat-label>
+    <mat-select name='finish_color_string' ngModel>
+      <mat-option *ngFor="let text of FinishColor" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p style="color: red;">Metal cost: {{MetalCost}}</p>
+  <p style="color: green;">Casting labor cost: {{MetalLaborCost}}</p>
+
+  <br>
+  <br>
+  <br>
+  <!-- STONE NAME INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Stone Name</mat-label>
+    <mat-select name='stone_name' ngModel>
+      <mat-option *ngFor="let text of StoneName" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- STONE SETTING TYPE INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Stone Setting Type</mat-label>
+    <mat-select name='setting_type' ngModel>
+      <mat-option *ngFor="let text of SettingType" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- MATERIAL INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Material</mat-label>
+    <mat-select name='material' ngModel>
+      <mat-option *ngFor="let text of Material" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- STONE AMOUNT OF MEASURE UNIT -->
+  <mat-form-field class="example-full-width">
+    <input name='amount_of_measure_unit_stone' matInput placeholder="Amount of measure unit" ngModel>
+  </mat-form-field>
+
+  <!-- STONE QUANTITY WITH CURRENT AMOUNT OF MEASURE -->
+  <mat-form-field class="example-full-width">
+    <input name='quantity_of_stone' matInput placeholder="Quantity" ngModel>
+  </mat-form-field>
+  <p style="color: red;">Stone cost: {{StoneCost}}</p>
+  <p style="color: green;">Stone Labor cost: {{StoneLaborCost}}</p>
+  <br>
+  <br>
+  <br>
+
+  <!-- FINDING NAME INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Finding Name</mat-label>
+    <mat-select name='finding_name' ngModel>
+      <mat-option *ngFor="let text of FindingName" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- FINDING AMOUNT OF MEASURE UNIT INPUT FIELD -->
+  <mat-form-field class="example-full-width">
+    <input name='amount_of_measure_unit_finding' matInput placeholder="Amount of measure unit" ngModel>
+  </mat-form-field>
+
+  <!-- FINDING QUANTITY WITH CURRENT AMOUNT OF MEASURE -->
+  <mat-form-field class="example-full-width">
+    <input name='quantity_of_finding' matInput placeholder="Quantity" ngModel>
+  </mat-form-field>
+
+  <p style="color: red;">Finding cost: {{FindingCost}}</p>
+  <p style="color: green;">Finding labor cost: {{FindingLaborCost}}</p>
+  <br>
+  <br>
+  <br>
+
+  <!-- CNC SIZE INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>CNC Size</mat-label>
+    <mat-select name='cnc_size_string' ngModel>
+      <mat-option *ngFor="let text of CncSize" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- CNC TYPE INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>CNC Type</mat-label>
+    <mat-select name='cnc_type_string' ngModel>
+      <mat-option *ngFor="let text of CncType" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- LACQUERING INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Lacquering</mat-label>
+    <mat-select name='lacquering_type_string' ngModel>
+      <mat-option *ngFor="let text of LacqueringType" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- PLATING INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Plating</mat-label>
+    <mat-select name='plating_type_string' ngModel>
+      <mat-option *ngFor="let text of PlatingType" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <p style="color: green;">Cnc Labor cost: {{CncCost}}</p>
+  <p style="color: green;">Lacquering Labor cost: {{LacqueringCost}}</p>
+  <p style="color: green;">Plating Labor cost: {{PlatingCost}}</p>
+
+  <button>Calculate</button>
+</form>

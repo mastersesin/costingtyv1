@@ -1,0 +1,15 @@
+<form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" >
+  <input type = "text" name = "emailid" placeholder = "emailid" ngModel>
+  <br/>
+  <input type = "password" name = "passwd" placeholder = "passwd" ngModel>
+  <br/>
+  <mat-form-field>
+    <mat-label>Design Type</mat-label>
+    <mat-select name = 'ty' ngModel>
+      <mat-option *ngFor="let text of DesignType" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <input type = "submit" value = "submit">
+</form>
