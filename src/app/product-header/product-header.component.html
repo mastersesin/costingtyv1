@@ -77,82 +77,6 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
-  <p style="color: red;">Metal cost: {{MetalCost}}</p>
-  <p style="color: green;">Casting labor cost: {{MetalLaborCost}}</p>
-
-  <br>
-  <br>
-  <br>
-  <!-- STONE NAME INPUT FIELD -->
-  <mat-form-field>
-    <mat-label>Stone Name</mat-label>
-    <mat-select name='stone_name' ngModel>
-      <mat-option *ngFor="let text of StoneName" [value]=text>
-        {{text}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <!-- STONE SETTING TYPE INPUT FIELD -->
-  <mat-form-field>
-    <mat-label>Stone Setting Type</mat-label>
-    <mat-select name='setting_type' ngModel>
-      <mat-option *ngFor="let text of SettingType" [value]=text>
-        {{text}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <!-- MATERIAL INPUT FIELD -->
-  <mat-form-field>
-    <mat-label>Material</mat-label>
-    <mat-select name='material' ngModel>
-      <mat-option *ngFor="let text of Material" [value]=text>
-        {{text}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <!-- STONE AMOUNT OF MEASURE UNIT -->
-  <mat-form-field class="example-full-width">
-    <input name='amount_of_measure_unit_stone' matInput placeholder="Amount of measure unit" ngModel>
-  </mat-form-field>
-
-  <!-- STONE QUANTITY WITH CURRENT AMOUNT OF MEASURE -->
-  <mat-form-field class="example-full-width">
-    <input name='quantity_of_stone' matInput placeholder="Quantity" ngModel>
-  </mat-form-field>
-  <p style="color: red;">Stone cost: {{StoneCost}}</p>
-  <p style="color: green;">Stone Labor cost: {{StoneLaborCost}}</p>
-  <br>
-  <br>
-  <br>
-
-  <!-- FINDING NAME INPUT FIELD -->
-  <mat-form-field>
-    <mat-label>Finding Name</mat-label>
-    <mat-select name='finding_name' ngModel>
-      <mat-option *ngFor="let text of FindingName" [value]=text>
-        {{text}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <!-- FINDING AMOUNT OF MEASURE UNIT INPUT FIELD -->
-  <mat-form-field class="example-full-width">
-    <input name='amount_of_measure_unit_finding' matInput placeholder="Amount of measure unit" ngModel>
-  </mat-form-field>
-
-  <!-- FINDING QUANTITY WITH CURRENT AMOUNT OF MEASURE -->
-  <mat-form-field class="example-full-width">
-    <input name='quantity_of_finding' matInput placeholder="Quantity" ngModel>
-  </mat-form-field>
-
-  <p style="color: red;">Finding cost: {{FindingCost}}</p>
-  <p style="color: green;">Finding labor cost: {{FindingLaborCost}}</p>
-  <br>
-  <br>
-  <br>
 
   <!-- CNC SIZE INPUT FIELD -->
   <mat-form-field>
@@ -194,6 +118,78 @@
     </mat-select>
   </mat-form-field>
 
+  <!-- STONE SETTING TYPE INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Stone Setting Type</mat-label>
+    <mat-select name='setting_type' ngModel>
+      <mat-option *ngFor="let text of SettingType" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br>
+  <br>
+  <br>
+  <!-- STONE NAME INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Stone Name</mat-label>
+    <mat-select name='stone_name' ngModel>
+      <mat-option *ngFor="let text of StoneName" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- MATERIAL INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Material</mat-label>
+    <mat-select name='material' ngModel>
+      <mat-option *ngFor="let text of Material" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- STONE AMOUNT OF MEASURE UNIT -->
+  <mat-form-field class="example-full-width">
+    <input name='amount_of_measure_unit_stone' matInput placeholder="Amount of measure unit" ngModel>
+  </mat-form-field>
+
+  <!-- STONE QUANTITY WITH CURRENT AMOUNT OF MEASURE -->
+  <mat-form-field class="example-full-width">
+    <input name='quantity_of_stone' matInput placeholder="Quantity" ngModel>
+  </mat-form-field>
+  <br>
+  <br>
+  <br>
+
+  <!-- FINDING NAME INPUT FIELD -->
+  <mat-form-field>
+    <mat-label>Finding Name</mat-label>
+    <mat-select name='finding_name' ngModel>
+      <mat-option *ngFor="let text of FindingName" [value]=text>
+        {{text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- FINDING AMOUNT OF MEASURE UNIT INPUT FIELD -->
+  <mat-form-field class="example-full-width">
+    <input name='amount_of_measure_unit_finding' matInput placeholder="Amount of measure unit" ngModel>
+  </mat-form-field>
+
+  <!-- FINDING QUANTITY WITH CURRENT AMOUNT OF MEASURE -->
+  <mat-form-field class="example-full-width">
+    <input name='quantity_of_finding' matInput placeholder="Quantity" ngModel>
+  </mat-form-field>
+
+  <p style="color: red;">Metal cost: {{MetalCost}}</p>
+  <p style="color: green;">Casting labor cost: {{MetalLaborCost}}</p>
+  <p style="color: red;">Stone cost: {{StoneCost}}</p>
+  <p style="color: green;">Stone Labor cost: {{StoneLaborCost}}</p>
+  <p style="color: red;">Finding cost: {{FindingCost}}</p>
+  <p style="color: green;">Finding labor cost: {{FindingLaborCost}}</p>
   <p style="color: green;">Cnc Labor cost: {{CncCost}}</p>
   <p style="color: green;">Lacquering Labor cost: {{LacqueringCost}}</p>
   <p style="color: green;">Plating Labor cost: {{PlatingCost}}</p>
