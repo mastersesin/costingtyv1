@@ -10,9 +10,9 @@
     </mat-select>
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
+  <!-- <mat-form-field class="example-full-width">
     <input name='alloy_amount_of_unit_of_measure' matInput placeholder="Amount of measure unnit" ngModel>
-  </mat-form-field>
+  </mat-form-field> -->
 
   <mat-form-field class="example-full-width">
     <input name='alloy_quantity' matInput placeholder="Quantity" ngModel>
@@ -128,6 +128,16 @@
     </mat-select>
   </mat-form-field>
 
+    <!-- MATERIAL INPUT FIELD -->
+    <mat-form-field>
+      <mat-label>Material</mat-label>
+      <mat-select name='material' ngModel>
+        <mat-option *ngFor="let text of Material" [value]=text>
+          {{text}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
   <br>
   <br>
   <br>
@@ -141,20 +151,10 @@
     </mat-select>
   </mat-form-field>
 
-  <!-- MATERIAL INPUT FIELD -->
-  <mat-form-field>
-    <mat-label>Material</mat-label>
-    <mat-select name='material' ngModel>
-      <mat-option *ngFor="let text of Material" [value]=text>
-        {{text}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-
   <!-- STONE AMOUNT OF MEASURE UNIT -->
-  <mat-form-field class="example-full-width">
+  <!-- <mat-form-field class="example-full-width">
     <input name='amount_of_measure_unit_stone' matInput placeholder="Amount of measure unit" ngModel>
-  </mat-form-field>
+  </mat-form-field> -->
 
   <!-- STONE QUANTITY WITH CURRENT AMOUNT OF MEASURE -->
   <mat-form-field class="example-full-width">
@@ -175,9 +175,9 @@
   </mat-form-field>
 
   <!-- FINDING AMOUNT OF MEASURE UNIT INPUT FIELD -->
-  <mat-form-field class="example-full-width">
+  <!-- <mat-form-field class="example-full-width">
     <input name='amount_of_measure_unit_finding' matInput placeholder="Amount of measure unit" ngModel>
-  </mat-form-field>
+  </mat-form-field> -->
 
   <!-- FINDING QUANTITY WITH CURRENT AMOUNT OF MEASURE -->
   <mat-form-field class="example-full-width">
